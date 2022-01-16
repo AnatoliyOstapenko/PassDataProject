@@ -57,19 +57,27 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KGi-u9-WGD"/>
-                                    <segue destination="yOO-Da-bfe" kind="show" identifier="goToSecondVC" id="QTS-Hc-m11"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYc-3d-I53" userLabel="resultLabel">
+                                <rect key="frame" x="20" y="115" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Lqs-iV-WdT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cta-ex-k3p"/>
+                            <constraint firstItem="fYc-3d-I53" firstAttribute="top" secondItem="N7k-XW-UDT" secondAttribute="bottom" constant="5" id="JF3-i4-pvk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wRi-b5-snz" secondAttribute="trailing" constant="20" id="UVj-D5-qfm"/>
                             <constraint firstItem="N7k-XW-UDT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V5I-RA-am3"/>
+                            <constraint firstItem="fYc-3d-I53" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZeJ-VA-OX3"/>
                             <constraint firstItem="wRi-b5-snz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cEj-Ia-Pxm"/>
                             <constraint firstItem="N7k-XW-UDT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="cOT-43-2F5"/>
                             <constraint firstItem="wRi-b5-snz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ciP-fo-IUj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fYc-3d-I53" secondAttribute="trailing" constant="20" id="cy9-f1-mEh"/>
                             <constraint firstItem="Lqs-iV-WdT" firstAttribute="top" secondItem="wRi-b5-snz" secondAttribute="bottom" constant="34" id="d37-h6-zLF"/>
                             <constraint firstItem="wRi-b5-snz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v10-x4-bEA"/>
                         </constraints>
@@ -78,6 +86,8 @@
                         <outlet property="loginButton" destination="Lqs-iV-WdT" id="MYG-zF-AMh"/>
                         <outlet property="loginTextField" destination="hYV-VL-Ulp" id="d9x-bd-e8k"/>
                         <outlet property="passwordTextField" destination="LFy-3q-7zC" id="SA8-Ud-dNG"/>
+                        <outlet property="resultLabel" destination="fYc-3d-I53" id="EMD-zd-eJf"/>
+                        <segue destination="yOO-Da-bfe" kind="show" identifier="goToSecondVC" id="8zO-cs-TQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,19 +97,19 @@
         <!--Second View Controller-->
         <scene sceneID="wsM-wJ-j9A">
             <objects>
-                <viewController id="yOO-Da-bfe" customClass="SecondViewController" customModule="PassDataProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yOO-Da-bfe" customClass="SecondViewController" customModule="PassDataProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QvL-Xd-jM6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnj-0M-9eD">
-                                <rect key="frame" x="0.0" y="30" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="74" width="414" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIz-bD-JJB">
-                                <rect key="frame" x="128" y="510" width="160" height="60"/>
+                                <rect key="frame" x="128" y="537" width="160" height="60"/>
                                 <color key="backgroundColor" systemColor="placeholderTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="40U-Vd-Vms"/>
@@ -111,6 +121,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goBackButtonPressed:" destination="yOO-Da-bfe" eventType="touchUpInside" id="way-JT-ZOd"/>
+                                    <segue destination="L6b-Gg-W4y" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="He9-ts-f0o"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,6 +142,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlH-bd-gNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="L6b-Gg-W4y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="852" y="84"/>
         </scene>

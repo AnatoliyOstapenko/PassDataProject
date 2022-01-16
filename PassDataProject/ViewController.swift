@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        //performSegue(withIdentifier: "goToSecondVC", sender: self)
+        performSegue(withIdentifier: "goToSecondVC", sender: nil)
+    }
+    // Create manualy IBAction to use unwind segue
+    @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
+        
     }
     
 }
