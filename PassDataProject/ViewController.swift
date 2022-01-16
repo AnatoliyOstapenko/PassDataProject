@@ -7,13 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController {    
+    
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        loginButton.layer.cornerRadius = 25.0 // add corner radius for login button
+
     }
 
-
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
+        
+    }
+    
 }
 
