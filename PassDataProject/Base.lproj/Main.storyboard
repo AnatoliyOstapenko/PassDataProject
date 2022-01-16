@@ -57,7 +57,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KGi-u9-WGD"/>
-                                    <segue destination="yOO-Da-bfe" kind="show" id="QTS-Hc-m11"/>
+                                    <segue destination="yOO-Da-bfe" kind="show" identifier="goToSecondVC" id="QTS-Hc-m11"/>
                                 </connections>
                             </button>
                         </subviews>
