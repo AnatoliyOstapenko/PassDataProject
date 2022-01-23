@@ -120,8 +120,23 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="goBackButtonPressed:" destination="yOO-Da-bfe" eventType="touchUpInside" id="way-JT-ZOd"/>
+                                    <action selector="goBackButtonPressed:" destination="yOO-Da-bfe" eventType="touchUpInside" id="6fV-rA-bhN"/>
                                     <segue destination="L6b-Gg-W4y" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="He9-ts-f0o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qm-Z8-VD9">
+                                <rect key="frame" x="127" y="448" width="160" height="60"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="0Yu-6V-I5B"/>
+                                    <constraint firstAttribute="height" constant="60" id="0ij-Y6-IIJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <state key="normal" title="QR CODE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="qrCodeButtonPressed:" destination="yOO-Da-bfe" eventType="touchUpInside" id="Ubm-6s-hdg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -130,15 +145,18 @@
                         <constraints>
                             <constraint firstItem="bnj-0M-9eD" firstAttribute="top" secondItem="T7O-Tk-0wc" secondAttribute="top" constant="30" id="1fj-nh-RqR"/>
                             <constraint firstItem="bnj-0M-9eD" firstAttribute="leading" secondItem="T7O-Tk-0wc" secondAttribute="leading" id="K5R-Fk-esj"/>
+                            <constraint firstItem="pIz-bD-JJB" firstAttribute="top" secondItem="3Qm-Z8-VD9" secondAttribute="bottom" constant="29" id="LOw-RW-Io1"/>
                             <constraint firstItem="pIz-bD-JJB" firstAttribute="centerX" secondItem="QvL-Xd-jM6" secondAttribute="centerX" constant="1" id="N3o-64-3nL"/>
                             <constraint firstItem="pIz-bD-JJB" firstAttribute="centerY" secondItem="QvL-Xd-jM6" secondAttribute="centerY" constant="119" id="RYw-zM-1Gx"/>
                             <constraint firstItem="T7O-Tk-0wc" firstAttribute="trailing" secondItem="bnj-0M-9eD" secondAttribute="trailing" id="gZy-MB-Aje"/>
+                            <constraint firstItem="3Qm-Z8-VD9" firstAttribute="centerX" secondItem="QvL-Xd-jM6" secondAttribute="centerX" id="zRL-7t-o8n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AFI-p2-WZe"/>
                     <connections>
                         <outlet property="goBackButton" destination="pIz-bD-JJB" id="CLQ-58-eEv"/>
                         <outlet property="label" destination="bnj-0M-9eD" id="1Tq-Es-GIZ"/>
+                        <outlet property="qrCodeButton" destination="3Qm-Z8-VD9" id="pEu-zw-f1o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlH-bd-gNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

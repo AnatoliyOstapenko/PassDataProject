@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2EC780279C0BDF005E4038 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2EC77F279C0BDE005E4038 /* QRCode.storyboard */; };
+		FA2EC783279C0C94005E4038 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EC782279C0C94005E4038 /* QRCodeViewController.swift */; };
 		FA44373D27934ED300CA811C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44373C27934ED300CA811C /* AppDelegate.swift */; };
 		FA44373F27934ED300CA811C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44373E27934ED300CA811C /* SceneDelegate.swift */; };
 		FA44374127934ED300CA811C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44374027934ED300CA811C /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2EC77F279C0BDE005E4038 /* QRCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
+		FA2EC782279C0C94005E4038 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		FA44373927934ED300CA811C /* PassDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA44373C27934ED300CA811C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA44373E27934ED300CA811C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA2EC785279D7F09005E4038 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA44374227934ED300CA811C /* Main.storyboard */,
+				FA2EC77F279C0BDE005E4038 /* QRCode.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA2EC786279D7FC9005E4038 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA44374027934ED300CA811C /* ViewController.swift */,
+				FA44375627942AB900CA811C /* SecondViewController.swift */,
+				FA2EC782279C0C94005E4038 /* QRCodeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		FA44373027934ED300CA811C = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +83,8 @@
 			children = (
 				FA44373C27934ED300CA811C /* AppDelegate.swift */,
 				FA44373E27934ED300CA811C /* SceneDelegate.swift */,
-				FA44374027934ED300CA811C /* ViewController.swift */,
-				FA44375627942AB900CA811C /* SecondViewController.swift */,
-				FA44374227934ED300CA811C /* Main.storyboard */,
+				FA2EC786279D7FC9005E4038 /* Controller */,
+				FA2EC785279D7F09005E4038 /* View */,
 				FA44374527934ED700CA811C /* Assets.xcassets */,
 				FA44374727934ED700CA811C /* LaunchScreen.storyboard */,
 				FA44374A27934ED700CA811C /* Info.plist */,
@@ -129,6 +151,7 @@
 			files = (
 				FA44374927934ED700CA811C /* LaunchScreen.storyboard in Resources */,
 				FA44374627934ED700CA811C /* Assets.xcassets in Resources */,
+				FA2EC780279C0BDF005E4038 /* QRCode.storyboard in Resources */,
 				FA44374427934ED300CA811C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +167,7 @@
 				FA44374127934ED300CA811C /* ViewController.swift in Sources */,
 				FA44373D27934ED300CA811C /* AppDelegate.swift in Sources */,
 				FA44373F27934ED300CA811C /* SceneDelegate.swift in Sources */,
+				FA2EC783279C0C94005E4038 /* QRCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -293,7 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K33FXWL25N;
 				INFOPLIST_FILE = PassDataProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K33FXWL25N;
 				INFOPLIST_FILE = PassDataProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

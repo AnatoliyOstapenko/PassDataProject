@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         guard let destination = segue.destination as? SecondViewController else { return }
         destination.labelText = loginTextField.text
     }
+    // Hide keyboard when user touch screen anywere
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -35,7 +36,9 @@ class ViewController: UIViewController {
     }
     // Create manualy IBAction to use unwind segue
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
-        
+        guard let source = segue.source as? SecondViewController, let text = source.labelText else { return }
+
+        resultLabel.text = "Welcome back, \(text)"
     }
     
 }
