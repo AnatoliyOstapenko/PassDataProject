@@ -8,33 +8,53 @@
 import UIKit
 
 class QRCodeViewController: UIViewController {
+
+    var qrImage: UIImage?
     
-    
-    @IBOutlet weak var qrCodeImage: UIButton!
+    @IBOutlet weak var qrCodeImageView: UIImageView!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        backButton.layer.cornerRadius = 25.0
+        qrCodeImageView.image = qrImage
+    }
+    
+    func goToWKWeb() {
+        let storyboard = UIStoryboard(name: "WKWeb", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "WKWeb") as? WKWebViewController else { return }
+        show(vc, sender: nil)
     }
     
     @IBAction func qrCodeButtonPressed(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func cancelBarButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        
+        print("QR Code button pressed")
+        
+        let alert = UIAlertController(title: "QR Code", message: "Would you like to jump into web?", preferredStyle: .alert)
+//        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+//            self.goToWKWeb()
+//        }
+        let cancel = UIAlertAction(title: "CANCEL", style: .cancel, handler: nil)
+//        alert.addAction(ok)
+        alert.addAction(cancel)
+        present(self, animated: true, completion: nil)
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "QR Code", message: "Would you like to jump into web?", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        let cancel = UIAlertAction(title: "CANCEL", style: .cancel, handler: nil)
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        present(self, animated: true, completion: nil)
+        
+        
     }
-    */
+
 
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA2EC780279C0BDF005E4038 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2EC77F279C0BDE005E4038 /* QRCode.storyboard */; };
 		FA2EC783279C0C94005E4038 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EC782279C0C94005E4038 /* QRCodeViewController.swift */; };
+		FA2EC78B279E112A005E4038 /* WKWeb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2EC78A279E112A005E4038 /* WKWeb.storyboard */; };
+		FA2EC78E279E1178005E4038 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EC78D279E1178005E4038 /* WKWebViewController.swift */; };
 		FA44373D27934ED300CA811C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44373C27934ED300CA811C /* AppDelegate.swift */; };
 		FA44373F27934ED300CA811C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44373E27934ED300CA811C /* SceneDelegate.swift */; };
 		FA44374127934ED300CA811C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44374027934ED300CA811C /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		FA2EC77F279C0BDE005E4038 /* QRCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		FA2EC782279C0C94005E4038 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		FA2EC78A279E112A005E4038 /* WKWeb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WKWeb.storyboard; sourceTree = "<group>"; };
+		FA2EC78D279E1178005E4038 /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		FA44373927934ED300CA811C /* PassDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA44373C27934ED300CA811C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA44373E27934ED300CA811C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 			children = (
 				FA44374227934ED300CA811C /* Main.storyboard */,
 				FA2EC77F279C0BDE005E4038 /* QRCode.storyboard */,
+				FA2EC78A279E112A005E4038 /* WKWeb.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -58,6 +63,7 @@
 				FA44374027934ED300CA811C /* ViewController.swift */,
 				FA44375627942AB900CA811C /* SecondViewController.swift */,
 				FA2EC782279C0C94005E4038 /* QRCodeViewController.swift */,
+				FA2EC78D279E1178005E4038 /* WKWebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA44374927934ED700CA811C /* LaunchScreen.storyboard in Resources */,
+				FA2EC78B279E112A005E4038 /* WKWeb.storyboard in Resources */,
 				FA44374627934ED700CA811C /* Assets.xcassets in Resources */,
 				FA2EC780279C0BDF005E4038 /* QRCode.storyboard in Resources */,
 				FA44374427934ED300CA811C /* Main.storyboard in Resources */,
@@ -166,6 +173,7 @@
 				FA44375727942AB900CA811C /* SecondViewController.swift in Sources */,
 				FA44374127934ED300CA811C /* ViewController.swift in Sources */,
 				FA44373D27934ED300CA811C /* AppDelegate.swift in Sources */,
+				FA2EC78E279E1178005E4038 /* WKWebViewController.swift in Sources */,
 				FA44373F27934ED300CA811C /* SceneDelegate.swift in Sources */,
 				FA2EC783279C0C94005E4038 /* QRCodeViewController.swift in Sources */,
 			);

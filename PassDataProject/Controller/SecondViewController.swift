@@ -20,6 +20,7 @@ class SecondViewController: UIViewController {
         
         guard let text = labelText else { return }
         label.text = "Hello, \(text)!"
+        
         goBackButton.layer.cornerRadius = 25.0
         qrCodeButton.layer.cornerRadius = 25.0
     }
@@ -40,10 +41,28 @@ class SecondViewController: UIViewController {
         let storyboard = UIStoryboard(name: "QRCode", bundle: nil)
         
         // Suitable for navigation controller only
-        let vc = storyboard.instantiateViewController(withIdentifier: "QRCode")
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "QRCode") as? QRCodeViewController else { return }
         
-        vc.modalPresentationStyle = .fullScreen // open full screen
-        present(vc, animated: true, completion: nil)
+        guard let qrString = labelText else { return }
+        vc.qrImage = generateQRCode(from: qrString)
+        
+        show(vc, sender: nil)
+    }
+    
+    func generateQRCode(from string: String) -> UIImage? {
+
+        let data = string.data(using: String.Encoding.ascii)
+
+            if let filter = CIFilter(name: "CIQRCodeGenerator") {
+                filter.setValue(data, forKey: "inputMessage")
+                let transform = CGAffineTransform(scaleX: 3, y: 3)
+
+                if let output = filter.outputImage?.transformed(by: transform) {
+                    return UIImage(ciImage: output)
+                }
+            }
+
+            return nil
     }
 
 }

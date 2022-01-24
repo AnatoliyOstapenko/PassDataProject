@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PiE-vj-gXX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6JW-4Y-g0I">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,77 +12,69 @@
         <!--Code View Controller-->
         <scene sceneID="awb-dK-hhd">
             <objects>
-                <viewController id="6JW-4Y-g0I" customClass="QRCodeViewController" customModule="PassDataProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRCode" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6JW-4Y-g0I" customClass="QRCodeViewController" customModule="PassDataProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZn-9c-kYY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QyW-yi-u5p">
-                                <rect key="frame" x="249" y="123" width="130" height="130"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hm3-7w-zFV">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="qrCodeButtonPressed:" destination="6JW-4Y-g0I" eventType="touchUpInside" id="Ytz-Q3-KUR"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoImage" translatesAutoresizingMaskIntoConstraints="NO" id="QyW-yi-u5p">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="Ajo-7E-Ce2"/>
-                                    <constraint firstAttribute="height" constant="130" id="XMv-7d-ZPk"/>
+                                    <constraint firstAttribute="width" constant="300" id="6T6-xC-YqI"/>
+                                    <constraint firstAttribute="height" constant="300" id="eQI-8R-JI8"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4in-9i-Ybh">
-                                <rect key="frame" x="249" y="123" width="130" height="130"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwO-Bx-NNs">
+                                <rect key="frame" x="57" y="618" width="300" height="50"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="IpH-Xn-lA7"/>
-                                    <constraint firstAttribute="height" constant="130" id="YyW-Hy-vFu"/>
+                                    <constraint firstAttribute="width" constant="300" id="ds1-zj-ALg"/>
+                                    <constraint firstAttribute="height" constant="50" id="rw3-Si-m7z"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="NoImage"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="qrCodeButtonPressed:" destination="6JW-4Y-g0I" eventType="touchUpInside" id="hdl-I8-JIr"/>
+                                    <action selector="backButtonPressed:" destination="6JW-4Y-g0I" eventType="touchUpInside" id="x6G-JZ-Hdx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="reT-dA-Boz"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
-                            <constraint firstItem="4in-9i-Ybh" firstAttribute="top" secondItem="reT-dA-Boz" secondAttribute="top" constant="35" id="9DB-5j-C3q"/>
-                            <constraint firstItem="reT-dA-Boz" firstAttribute="trailing" secondItem="QyW-yi-u5p" secondAttribute="trailing" constant="35" id="A5k-uH-6Og"/>
-                            <constraint firstItem="reT-dA-Boz" firstAttribute="trailing" secondItem="4in-9i-Ybh" secondAttribute="trailing" constant="35" id="QYX-lQ-BCY"/>
-                            <constraint firstItem="QyW-yi-u5p" firstAttribute="top" secondItem="reT-dA-Boz" secondAttribute="top" constant="35" id="jVn-gZ-szV"/>
+                            <constraint firstItem="hm3-7w-zFV" firstAttribute="centerX" secondItem="tZn-9c-kYY" secondAttribute="centerX" id="0eF-Pb-Hb7"/>
+                            <constraint firstItem="QyW-yi-u5p" firstAttribute="centerX" secondItem="tZn-9c-kYY" secondAttribute="centerX" id="27n-NB-WYD"/>
+                            <constraint firstItem="hm3-7w-zFV" firstAttribute="centerY" secondItem="tZn-9c-kYY" secondAttribute="centerY" id="3cp-Yu-bfZ"/>
+                            <constraint firstItem="hm3-7w-zFV" firstAttribute="width" secondItem="QyW-yi-u5p" secondAttribute="width" id="4zt-Zp-BBs"/>
+                            <constraint firstItem="AwO-Bx-NNs" firstAttribute="centerX" secondItem="tZn-9c-kYY" secondAttribute="centerX" id="J4Z-Ze-5wb"/>
+                            <constraint firstItem="AwO-Bx-NNs" firstAttribute="top" secondItem="QyW-yi-u5p" secondAttribute="bottom" constant="20" id="gox-eU-7D6"/>
+                            <constraint firstItem="QyW-yi-u5p" firstAttribute="centerY" secondItem="tZn-9c-kYY" secondAttribute="centerY" id="hCH-wG-c0U"/>
+                            <constraint firstItem="hm3-7w-zFV" firstAttribute="height" secondItem="QyW-yi-u5p" secondAttribute="height" id="qZD-iU-Cup"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ilJ-Z1-MbF">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="VRu-4c-yB2">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="cancelBarButtonPressed:" destination="6JW-4Y-g0I" id="zft-wH-Qup"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ilJ-Z1-MbF"/>
                     <connections>
-                        <outlet property="qrCodeImage" destination="4in-9i-Ybh" id="Pd6-rh-WUy"/>
+                        <outlet property="backButton" destination="AwO-Bx-NNs" id="llJ-z9-pek"/>
+                        <outlet property="qrCodeImageView" destination="QyW-yi-u5p" id="vMS-A8-zJZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vl-wj-dLa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="834.78260869565224" y="91.741071428571431"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cwG-is-rYV">
-            <objects>
-                <navigationController storyboardIdentifier="QRCode" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PiE-vj-gXX" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m6u-ME-fkW">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" systemColor="systemGray2Color"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6JW-4Y-g0I" kind="relationship" relationship="rootViewController" id="WKd-QE-kjy"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zYG-ag-Z6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="91.741071428571431"/>
-        </scene>
     </scenes>
     <resources>
         <image name="NoImage" width="56.5" height="56.5"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
